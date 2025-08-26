@@ -1,7 +1,7 @@
 # model-extraction-attack
-Introduction
+**Introduction**
 
-This is something that I made back in postgrad.
+This is something that I made back in postgrad -
 Which based on this paper: https://arxiv.org/abs/1609.02943
 
 This MEA (Model Extraction Attack) explores against a digit recognition system trained on the MNIST dataset.
@@ -10,13 +10,15 @@ has the aim to replicate a target model (LeNet CNN) by exploiting only black-box
 
 this work also has defense mechanisms to protect against model stealing by identifying adversarial queries by introducing noise into responses.
 
-Project Overview
+
+**Project Overview**
 
 -Objective: steal/replicate a model used in national voting system's digit recognition model.
 -Method: Interact with the targeet model as a benign user -> send adversarial queries -> Infer model Behaviour -> train the attack model.
 -Dataset: MNIST
 
-Attack Overview
+
+**Attack Overview**
 1. Target model (LeNet):
  1.a. Simulates a black-box digit classifier used in voting system.
  1.b. Only predictions are available, no architecture and/or parameters.
@@ -39,7 +41,8 @@ Attack Overview
  - Confusion Matrix
  - Computational cost (time (/s))
 
-Result
+
+**Result**
 | Run | LR     | Epochs | Accuracy (%) | F1-Score | Time (s)  |
 | --- | ------ | ------ | ------------ | -------- | --------- |
 | 1   | 0.0001 | 10     | 90.94        | 0.91     | 111.17    |
@@ -52,7 +55,8 @@ tldr;
 1. peak performance at 98.11% accuracy with balanced cost.
 2. even with limited queries, the attack model replicted the target effectively.
 
-Defense overview
+
+**Defense overview**
 
 Defense mechanism strategy that implemented are:
  1. Query classification: Detect in-Distribution (ID) vs. Out-of-Distribution (OOD) queries using Mahalanobis distance + probability thresholding.
