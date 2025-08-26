@@ -62,11 +62,11 @@ tl;dr:
 Defense mechanism strategy that implemented are:
  1. Query classification: Detect in-Distribution (ID) vs. Out-of-Distribution (OOD) queries using Mahalanobis distance + probability thresholding.
  2. Response Modification:
-    2.a. ID queries -> return accurate predictions.
-    2.b. OOD queries -> inject noise to mislead adversaries.
+    - ID queries -> return accurate predictions.
+    - OOD queries -> inject noise to mislead adversaries.
 
  3. Result:
-    3.a. Succesfully reduced attacker's accuracy 
-    3.b. Increased attack cost significantly
-    3.c. maintained high accuracy for benign uses' queries.
+    - Succesfully reduced attacker's accuracy 
+    - Increased attack cost significantly
+    - maintained high accuracy for benign uses' queries.
 
