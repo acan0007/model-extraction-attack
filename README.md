@@ -13,21 +13,22 @@ this work also has defense mechanisms to protect against model stealing by ident
 
 **Project Overview**
 
--Objective: steal/replicate a model used in national voting system's digit recognition model.
--Method: Interact with the targeet model as a benign user -> send adversarial queries -> Infer model Behaviour -> train the attack model.
--Dataset: MNIST
+- Objective: steal/replicate a model used in national voting system's digit recognition model.
+- Method: Interact with the targeet model as a benign user -> send adversarial queries -> Infer model Behaviour -> train the attack model.
+- Dataset: MNIST
 
 
 **Attack Overview**
 1. Target model (LeNet):
- 1.a. Simulates a black-box digit classifier used in voting system.
- 1.b. Only predictions are available, no architecture and/or parameters.
+ - Simulates a black-box digit classifier used in voting system.
+ - Only predictions are available, no architecture and/or parameters.
+
 
 2. Attack Model (LeNet_a):
- 2.a. Designed by the attacker to mimic the target model.
- 2.b. trained using;
-    - MNIST dataset labels
-    - predicted outputs from target model
+ - Designed by the attacker to mimic the target model.
+ - trained using:
+    1. MNIST dataset labels
+    2. predicted outputs from target model
 
 3. Training setup:
  - Learning Rates; 0.0001 - 0.001
@@ -51,7 +52,7 @@ this work also has defense mechanisms to protect against model stealing by ident
 | 4   | 0.0005 | 50     | **98.11**    | 0.98     | 590.27    |
 | 5   | 0.001  | 5      | 95.94        | 0.96     | **60.17** |
 
-tldr; 
+tl;dr: 
 1. peak performance at 98.11% accuracy with balanced cost.
 2. even with limited queries, the attack model replicted the target effectively.
 
