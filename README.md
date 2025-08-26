@@ -1,5 +1,6 @@
 # model-extraction-attack
 Introduction
+
 This is something that I made back in postgrad.
 Which based on this paper: https://arxiv.org/abs/1609.02943
 
@@ -10,6 +11,7 @@ has the aim to replicate a target model (LeNet CNN) by exploiting only black-box
 this work also has defense mechanisms to protect against model stealing by identifying adversarial queries by introducing noise into responses.
 
 Project Overview
+
 -Objective: steal/replicate a model used in national voting system's digit recognition model.
 -Method: Interact with the targeet model as a benign user -> send adversarial queries -> Infer model Behaviour -> train the attack model.
 -Dataset: MNIST
@@ -51,6 +53,7 @@ tldr;
 2. even with limited queries, the attack model replicted the target effectively.
 
 Defense overview
+
 Defense mechanism strategy that implemented are:
  1. Query classification: Detect in-Distribution (ID) vs. Out-of-Distribution (OOD) queries using Mahalanobis distance + probability thresholding.
  2. Response Modification:
